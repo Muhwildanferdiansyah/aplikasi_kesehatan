@@ -85,59 +85,81 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child:
           Container(
-          color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.all(36.0),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children:<Widget> [
-                    SizedBox(
-                      height: 200,
-                      child: Image.asset(
-                        "assets/logo.png",
-                      fit: BoxFit.contain,)
-                    ),
-                    SizedBox(
-                      height: 45,
-                    ),
-                    emailField,
-                    SizedBox(
-                      height: 25,
-                    ),
-                    passwordField,
-                    SizedBox(
-                      height: 35,
-                    ),
-                    loginButton,
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+          color: Colors.blue,
+            child: Card(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              elevation: 5,
+              margin: EdgeInsets.all(60),
+              child: Padding(
+                padding: const EdgeInsets.all(36.0),
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:<Widget> [
+                      SizedBox(
+                        height: 180,
+                        child: Image.asset(
+                          "assets/logo.png",
+                        fit: BoxFit.contain,)
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text("LOGIN AMEC-19",
+                        style: TextStyle(
+                            color: Colors.blue ,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text("Aplikasi Monitoring dan Edukasi Covid-19",
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 45,
+                      ),
+                      emailField,
+                      SizedBox(
+                        height: 25,
+                      ),
+                      passwordField,
+                      SizedBox(
+                        height: 35,
+                      ),
+                      loginButton,
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
 
-                      children:<Widget> [
-                        Text("Tidak Mempunyai akun?"),
-                        //navigasi ke halaman register
-                        GestureDetector(
-                         onTap: () {
-                           Navigator.push(
-                               context,
-                               MaterialPageRoute(
-                                   builder: (context) =>
-                                       RegisterScreen()));
-                         },
-                          child: Text(
-                            "Daftar",
-                            style: TextStyle(
-                              color: Colors.blue,
-                                fontWeight: FontWeight.bold,fontSize:15),
+                        children:<Widget> [
+                          Text("Tidak Mempunyai akun?"),
+                          //navigasi ke halaman register
+                          GestureDetector(
+                           onTap: () {
+                             Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                     builder: (context) =>
+                                         RegisterScreen()));
+                           },
+                            child: Text(
+                              "Daftar",
+                              style: TextStyle(
+                                color: Colors.blue,
+                                  fontWeight: FontWeight.bold,fontSize:15),
+                            ),
                           ),
-                        ),
-                      ],),
-                  ],
+                        ],),
+                    ],
+                  ),
                 ),
               ),
             ),

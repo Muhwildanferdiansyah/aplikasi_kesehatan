@@ -27,7 +27,22 @@ class _HomePageState extends State<HomePage> {
               Text("Selamat datang kembali",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-
+              SizedBox(height: 10,
+              ),
+              Text("Nama",
+              style: TextStyle(
+                color: Colors.black54,
+                fontWeight: FontWeight.w500,
+              )),
+              Text("Email",
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w500,
+                  )),
+              SizedBox(
+                height: 15,
+              ),
+              ActionChip(label: Text("Keluar"), onPressed: (){})
             ],
           ),
         ),

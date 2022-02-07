@@ -145,10 +145,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.blue),
+          icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -158,37 +158,45 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: SingleChildScrollView(
           child:
           Container(
-            color: Colors.white,
-            child: Padding(
-              padding: const EdgeInsets.all(36.0),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children:<Widget> [
-                    SizedBox(
-                        height: 200,
-                        child: Image.asset(
-                          "assets/logo.png",
-                          fit: BoxFit.contain,)
-                    ),
-                    SizedBox(height: 45,),
-                    firstnameField,
-                    SizedBox(height: 20,),
-                    secondnameField,
-                    SizedBox(height: 20,),
-                    emailField,
-                    SizedBox(height: 20,),
-                    passwordField,
-                    SizedBox(height: 20),
-                    confrimPasswordField,
-                    SizedBox(height: 20),
-                    daftarButton,
-                  ],
-                    ),
-                ),
+            color: Colors.blue,
+            child: Card(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
               ),
+              elevation: 5,
+              margin: EdgeInsets.all(60),
+              child: Padding(
+                padding: const EdgeInsets.all(36.0),
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:<Widget> [
+                      SizedBox(
+                          height: 200,
+                          child: Image.asset(
+                            "assets/logo.png",
+                            fit: BoxFit.contain,)
+                      ),
+                      SizedBox(height: 45,),
+                      firstnameField,
+                      SizedBox(height: 20,),
+                      secondnameField,
+                      SizedBox(height: 20,),
+                      emailField,
+                      SizedBox(height: 20,),
+                      passwordField,
+                      SizedBox(height: 20),
+                      confrimPasswordField,
+                      SizedBox(height: 20),
+                      daftarButton,
+                    ],
+                      ),
+                  ),
+                ),
+            ),
             ),
           ),
         ),
