@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "578817328310",
+    "project_id": "kesehatan-67a2f",
+    "storage_bucket": "kesehatan-67a2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578817328310:android:322d3fdf6de613700d1217",
+        "android_client_info": {
+          "package_name": "com.example.aplikasi_kesehatan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578817328310-07btbio386bt2oscdk0jt0de4hf5uhnm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aplikasi_kesehatan",
+            "certificate_hash": "90ff689a9bb98d0abf755a5b4a798957067b2c38"
+          }
+        },
+        {
+          "client_id": "578817328310-45a508attmg4p2dsve6ilgj2ugibtdai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChwVFPwbdw7uqKcQ2wpFOTKj-GfzmTPfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578817328310-45a508attmg4p2dsve6ilgj2ugibtdai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
