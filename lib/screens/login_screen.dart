@@ -19,7 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = new TextEditingController();
 
   //firebase
-  final _auth = FirebaseAuth.instance;
+  // final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +87,10 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
         minWidth: MediaQuery.of(context).size.width,
         onPressed: () {
-          signIn(emailController.text, passwordController.text);
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+
+          //firebase
+          // signIn(emailController.text, passwordController.text);
         },
         child: Text(
           "Login",
@@ -107,10 +110,10 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Card(
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50.0),
+                borderRadius: BorderRadius.circular(30.0),
               ),
               elevation: 5,
-              margin: EdgeInsets.all(60),
+              margin: EdgeInsets.all(10),
               child: Padding(
                 padding: const EdgeInsets.all(36.0),
                 child: Form(
@@ -188,19 +191,18 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
   // fungsi login
-
-  void signIn(String email, String password) async {
-    if (_formKey.currentState!.validate()) {
-      await _auth
-          .signInWithEmailAndPassword(email: email, password: password)
-          .then((uid) => {
-                Fluttertoast.showToast(msg: "Login Berhasil"),
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => HomePage())),
-              })
-          .catchError((e) {
-        Fluttertoast.showToast(msg: e!.messege);
-      });
-    }
-  }
+  // void signIn(String email, String password) async {
+  //   if (_formKey.currentState!.validate()) {
+  //     await _auth
+  //         .signInWithEmailAndPassword(email: email, password: password)
+  //         .then((uid) => {
+  //               Fluttertoast.showToast(msg: "Login Berhasil"),
+  //               Navigator.of(context).pushReplacement(
+  //                   MaterialPageRoute(builder: (context) => HomePage())),
+  //             })
+  //         .catchError((e) {
+  //       Fluttertoast.showToast(msg: e!.messege);
+  //     });
+  //   }
+  // }
 }

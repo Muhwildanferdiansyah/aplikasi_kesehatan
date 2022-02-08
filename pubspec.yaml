@@ -47,6 +47,18 @@ flutter:
   uses-material-design: true
   assets:
     - assets/logo.png
+    - assets/background.png
+    - assets/darurat.png
+    - assets/default-user.png
+    - assets/education.png
+    - assets/grafik.png
+    - assets/lovely_time.png
+    - assets/riwayat.png
+    - assets/telpon.png
+    - assets/doctor.jpg
+    - assets/jadwal.jpg
+    - assets/ambulance.png
+
     # To add assets to your application, add an assets section, like this:
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.
