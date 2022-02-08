@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       // appBar: AppBar(title: Text("Selamat datang"), centerTitle: true,
       // ),
+      backgroundColor: Colors.blue,
       body: Container(
         decoration: new BoxDecoration(
           image: DecorationImage(
